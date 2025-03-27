@@ -2,6 +2,8 @@
 
 A collection of custom MCP (Model Context Protocol) servers providing various services including calendar management and weather information.
 
+For more information about building MCP servers, see the [official MCP documentation](https://modelcontextprotocol.io/quickstart/server).
+
 ## Features
 
 - **Calendar Service**: Integration with Google Calendar API for event management
@@ -27,15 +29,14 @@ git clone <your-repository-url>
 cd my-mcp-servers
 ```
 
-3. Create and activate virtual environment:
+3. Sync your environment:
 ```bash
-uv venv
-source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+uv sync
 ```
 
-4. Install dependencies:
+4. Test if it's working:
 ```bash
-uv add "mcp[cli]" google-api-core google-api-python-client google-auth google-auth-oauthlib httpx python-dateutil pytz tzlocal
+uv run weather/weather.py
 ```
 
 ## Configuration
