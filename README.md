@@ -58,18 +58,6 @@ The weather service offers:
 - Weather alerts
 - Location-based weather information
 
-## Dependencies
-
-- google-api-core
-- google-api-python-client
-- google-auth
-- google-auth-oauthlib
-- httpx
-- mcp[cli]
-- python-dateutil
-- pytz
-- tzlocal
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
