@@ -341,7 +341,7 @@ async def create_event(
     Args:
         title: Title of the event (can be inferred from context)
         description: Description of the event (can be inferred from context)
-        relative_date: Date string (e.g., "next Monday", "next 25/09", "next month", "tomorrow")
+        relative_date: Date string (e.g., "next Monday", "next 04/01" for April 1st - use American format MM/DD, "next month", "tomorrow")
         start_hour: Hour of the day to schedule the event, in 24-hour format (e.g., 14 for 2:00 PM). 
                    Must be explicitly provided by user - do not assume a default time.
         duration_minutes: Duration in minutes (defaults to 60, no need to confirm unless user implies different duration)
