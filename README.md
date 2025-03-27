@@ -42,6 +42,7 @@ uv run weather/weather.py
 ## Configuration
 
 1. Place your Google Calendar API credentials in `credentials.json`
+   - To obtain your credentials, follow the [Google Calendar API Python Quickstart Guide](https://developers.google.com/calendar/api/quickstart/python)
    Note: The authentication token will be automatically generated on first use of the calendar service.
 
 ## Services
