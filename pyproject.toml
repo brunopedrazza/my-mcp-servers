@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "azure-devops>=7.1.0b4",
     "google-api-core>=2.24.2",
     "google-api-python-client>=2.165.0",
     "google-auth>=2.38.0",
