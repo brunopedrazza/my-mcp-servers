@@ -8,6 +8,7 @@ For more information about building MCP servers, see the [official MCP documenta
 
 - **Calendar Service**: Integration with Google Calendar API for event management
 - **Weather Service**: Weather information and forecasting capabilities
+- **Sound Control Service**: Basic playback controls for the Music app on macOS
 
 ## System Requirements
 
@@ -58,6 +59,12 @@ The weather service offers:
 - Weather forecasts
 - Weather alerts
 - Location-based weather information
+
+### Sound Control Service
+This service exposes simple playback controls for macOS. It can:
+- Play or pause the current track
+- Skip to the next track
+- Return to the previous track
 
 ## License
 
