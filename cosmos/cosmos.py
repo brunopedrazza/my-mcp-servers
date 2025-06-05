@@ -40,7 +40,7 @@ async def initialize(
 async def get_document_by_id(doc_id: str) -> dict[str, Any] | None:
     """Fetch a document by id from the configured Cosmos DB container."""
     if _container is None:
-        return None
+        return {"error": "Cosmos DB container not initialized"}
     try:
         items = list(
             _container.query_items(
@@ -51,8 +51,8 @@ async def get_document_by_id(doc_id: str) -> dict[str, Any] | None:
         )
         if items:
             return items[0]
-    except Exception:
-        pass
+    except Exception as e:
+        return {"error": f"Failed to query document: {str(e)}"}
     return None
 
 
