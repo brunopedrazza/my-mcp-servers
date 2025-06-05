@@ -9,6 +9,7 @@ For more information about building MCP servers, see the [official MCP documenta
 - **Calendar Service**: Integration with Google Calendar API for event management
 - **Weather Service**: Weather information and forecasting capabilities
 - **Sound Control Service**: Basic playback controls for the Music app on macOS
+- **Cosmos DB Service**: Retrieve documents from Azure Cosmos DB containers
 
 ## System Requirements
 
@@ -65,6 +66,11 @@ This service exposes simple playback controls for macOS. It can:
 - Play or pause the current track
 - Skip to the next track
 - Return to the previous track
+
+### Cosmos DB Service
+The Cosmos DB service connects to Azure Cosmos DB and allows retrieval of
+documents by their `id`. Connection information is securely loaded from an Azure
+Key Vault secret during initialization.
 
 ## License
 
