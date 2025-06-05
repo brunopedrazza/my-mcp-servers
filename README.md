@@ -9,6 +9,7 @@ For more information about building MCP servers, see the [official MCP documenta
 - **Calendar Service**: Integration with Google Calendar API for event management
 - **Weather Service**: Weather information and forecasting capabilities
 - **Sound Control Service**: Basic playback controls for the Music app on macOS
+- **Cosmos DB Service**: Retrieve documents from Azure Cosmos DB containers
 
 ## System Requirements
 
@@ -65,6 +66,36 @@ This service exposes simple playback controls for macOS. It can:
 - Play or pause the current track
 - Skip to the next track
 - Return to the previous track
+
+### Cosmos DB Service
+The Cosmos DB service connects to Azure Cosmos DB and allows retrieval of
+documents by their `id`. Connection information is securely loaded from an Azure
+Key Vault secret during initialization.
+
+#### Usage
+Initialize the service with your Azure resources:
+- `keyvault_name`: Your Azure Key Vault name (e.g., "my-keyvault")
+- `secret_name`: Name of the secret containing your Cosmos DB connection string
+- `database_name`: Target Cosmos DB database name
+- `container_name`: Target container name within the database
+
+Example initialization:
+```python
+# The service will automatically connect using DefaultAzureCredential
+# Ensure your environment has proper Azure authentication configured
+await initialize(
+    keyvault_name="my-company-keyvault",
+    secret_name="cosmos-connection-string", 
+    database_name="production-db",
+    container_name="documents"
+)
+```
+
+Once initialized, you can retrieve documents by ID:
+```python
+# Retrieve a document by its ID
+document = await get_document_by_id("user-123")
+```
 
 ## License
 
